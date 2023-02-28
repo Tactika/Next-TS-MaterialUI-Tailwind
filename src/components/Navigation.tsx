@@ -53,6 +53,7 @@ function Navigation() {
             noWrap
             component="a"
             href="/"
+            className="md:flex text-decoration-none xs:hidden"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -60,7 +61,7 @@ function Navigation() {
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
-              textDecoration: "none",
+              // textDecoration: "none",
             }}
           >
             <Image
@@ -146,7 +147,7 @@ function Navigation() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -175,7 +176,7 @@ function Navigation() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

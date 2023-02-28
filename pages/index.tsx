@@ -11,8 +11,24 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import Navigation from "../src/components/Navigation";
+import BasicModal from "../src/components/Modal";
+import Modal from "../src/components/Modal";
+import { useState } from "react";
+import { project } from "../src/types";
+import useSWR from "swr";
+import Skills from "../src/components/Skills";
+import Projects from "../src/components/Projects";
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
+  const { data, error } = useSWR("/api/staticdata", fetcher);
+
+  if (error) return <div>failed to load</div>;
+  if (!data) return <div>loading...</div>;
+
+  console.log("Projects in Index", data.data);
+
   return (
     <Container maxWidth="lg">
       <Box
@@ -63,168 +79,10 @@ export default function Home() {
               />
             </div>
           </article>
-          <article>
-            <div>
-              <h2>My Skills</h2>
-              <div>
-                <h3>Front End</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS3</li>
-                  <li>TypeScript</li>
-                  <li>JavaScript</li>
-                  <li>Redux</li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-              <div>
-                <h3>Back End</h3>
-                <ul>
-                  <li>Node.js</li>
-                  <li>Laravel</li>
-                  <li>Django</li>
-                  <li>MySQL/MariaDB</li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-              <div>
-                <h3>Frameworks</h3>
-                <ul>
-                  <li>React.js</li>
-                  <li>Next.js</li>
-                  <li>TailwindCSS</li>
-                  <li>MaterialUI</li>
-                  <li>Laravel</li>
-                  <li></li>
-                </ul>
-              </div>
-              <div>
-                <h3>Tools</h3>
-                <ul>
-                  <li>Git</li>
-                  <li>GitHub</li>
-                  <li>VS Code</li>
-                  <li>Postman</li>
-                  <li>Insomnia</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div>
-              <h2>My Projects</h2>
-            </div>
-            <div>
-              <img src="images/damien.jpg" alt="First Project" width={300} />
-              <h3>Project 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                suscipit inventore eius? Earum illum hic deserunt iusto nemo
-                quibusdam quo adipisci. Enim excepturi dignissimos eaque, illo
-                nulla amet velit? Quos!
-              </p>
 
-              <a href="#">
-                <button>Live</button>
-              </a>
-
-              <a href="#">
-                <button>Github</button>
-              </a>
-            </div>
-            <div>
-              <img src="images/damien.jpg" alt="Second Project" width={300} />
-              <h3>Project 2</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                suscipit inventore eius? Earum illum hic deserunt iusto nemo
-                quibusdam quo adipisci. Enim excepturi dignissimos eaque, illo
-                nulla amet velit? Quos!
-              </p>
-
-              <a href="#">
-                <button>Live</button>
-              </a>
-
-              <a href="#">
-                <button>Github</button>
-              </a>
-            </div>
-            <div>
-              <img src="images/damien.jpg" alt="Third Project" width={300} />
-              <h3>Project 3</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                suscipit inventore eius? Earum illum hic deserunt iusto nemo
-                quibusdam quo adipisci. Enim excepturi dignissimos eaque, illo
-                nulla amet velit? Quos!
-              </p>
-
-              <a href="#">
-                <button>Live</button>
-              </a>
-
-              <a href="#">
-                <button>Github</button>
-              </a>
-            </div>
-            <div>
-              <img src="images/damien.jpg" alt="Fourth Project" width={300} />
-              <h3>Project 4</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                suscipit inventore eius? Earum illum hic deserunt iusto nemo
-                quibusdam quo adipisci. Enim excepturi dignissimos eaque, illo
-                nulla amet velit? Quos!
-              </p>
-
-              <a href="#">
-                <button>Live</button>
-              </a>
-
-              <a href="#">
-                <button>Github</button>
-              </a>
-            </div>
-            <div>
-              <img src="images/damien.jpg" alt="Fifth Project" width={300} />
-              <h3>Project 5</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                suscipit inventore eius? Earum illum hic deserunt iusto nemo
-                quibusdam quo adipisci. Enim excepturi dignissimos eaque, illo
-                nulla amet velit? Quos!
-              </p>
-
-              <a href="#">
-                <button>Live</button>
-              </a>
-
-              <a href="#">
-                <button>Github</button>
-              </a>
-            </div>
-            <div>
-              <img src="images/damien.jpg" alt="Sixth Project" width={300} />
-              <h3>Project 6</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                suscipit inventore eius? Earum illum hic deserunt iusto nemo
-                quibusdam quo adipisci. Enim excepturi dignissimos eaque, illo
-                nulla amet velit? Quos!
-              </p>
-
-              <a href="#">
-                <button>Live</button>
-              </a>
-
-              <a href="#">
-                <button>Github</button>
-              </a>
-            </div>
-          </article>
+          {/* Skills Section - This is where I want to use the skills data from the API */}
+          <Skills skills={data.data.skills} />
+          <Projects projects={data.data.projects} />
           <article>
             <div>
               <h2>Contact</h2>

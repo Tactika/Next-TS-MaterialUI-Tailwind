@@ -1,0 +1,188 @@
+ { 
+  "data" : {
+    "skills" : {
+    "languages": [
+      {
+        "name": "JavaScript",
+        "description": "JavaScript",
+        "icon": "fab fa-js-square"
+      },
+      {
+        "name": "TypeScript",
+        "description": "TypeScript",
+        "icon": "fab fa-js-square"
+      },
+      {
+        "name": "Python",
+        "description": "Python",
+        "icon": "fab fa-python"
+      },
+      {
+        "name": "PHP",
+        "description": "PHP",
+        "icon": "fab fa-php"
+      },
+      {
+        "name": "Ruby",
+        "description": "Ruby",
+        "icon": "fab fa-ruby"
+      }
+    ],
+    "frontend": [
+      {
+        "name": "HTML",
+        "description": "HTML",
+        "icon": "fab fa-html5"
+      },
+      {
+        "name": "CSS",
+        "description": "CSS",
+        "icon": "fab fa-css3-alt"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js",
+        "description": "Node.js",
+        "icon": "fab fa-node-js"
+      },
+      {
+        "name": "Express",
+        "description": "Express",
+        "icon": "fab fa-node-js"
+      },
+      {
+        "name": "Ruby on Rails",
+        "description": "Ruby on Rails",
+        "icon": "fab fa-ruby"
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "description": "React",
+        "icon": "fab fa-react"
+      },
+      {
+        "name": "Next.js",
+        "description": "Next.js",
+        "icon": "fab fa-react"
+      },
+      {
+        "name": "Bootstrap",
+        "description": "Bootstrap",
+        "icon": "fab fa-bootstrap"
+      },
+      {
+        "name": "Material UI",
+        "description": "Material UI",
+        "icon": "fab fa-react"
+      }
+    ],
+    "database": [
+      {
+        "name": "MongoDB",
+        "description": "MongoDB",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "MySQL",
+        "description": "MySQL",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "PostgreSQL",
+        "icon": "fas fa-database"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git",
+        "description": "Git",
+        "icon": "fab fa-git"
+      },
+      {
+        "name": "GitHub",
+        "description": "GitHub",
+        "icon": "fab fa-github"
+      },
+      {
+        "name": "VS Code",
+        "description": "VS Code",
+        "icon": "fa-sharp fa-solid fa-code"
+      },
+      {
+        "name": "Terminal",
+        "description": "Terminal",
+        "icon": "fas fa-terminal"
+      },
+      {
+        "name": "Postman",
+        "description": "Postman",
+        "icon": "fas fa-terminal"
+      },
+      {
+        "name": "Insomnia",
+        "description": "Insomnia",
+        "icon": "fas fa-terminal"
+      }
+    ]
+    },
+    "projects" : [
+      {
+        "name": "Portfolio",
+        "description": "My portfolio website",
+        "images": [
+          {"url": "https://i.imgur.com/4ZQZ7Zu.png", "caption": "caption"},
+          {"url": "https://i.imgur.com/4ZQZ7Zu.png", "caption": "caption"}
+        ],
+        "technologies": [
+          "React",
+          "Next.js",
+          "Material UI",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": ""
+          },
+          {
+            "name": "Live",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "name": "Portfolio",
+        "description": "My portfolio website",
+        "images": [
+          {"url": "https://i.imgur.com/4ZQZ7Zu.png", "caption": "caption"},
+          {"url": "https://i.imgur.com/4ZQZ7Zu.png", "caption": "caption"}
+        ],
+        "technologies": [
+          "React",
+          "Next.js",
+          "Material UI",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": ""
+          },
+          {
+            "name": "Live",
+            "url": ""
+          }
+        ]
+      }
+    ]
+  }
+  
+}
