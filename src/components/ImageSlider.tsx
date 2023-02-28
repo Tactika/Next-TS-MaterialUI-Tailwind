@@ -9,7 +9,7 @@ const Slideshow = (props: any) => {
       <Slide>
         {images.map((image: ImageObject, index: number) => (
           <div key={index}>
-            <img style={{ width: "100%" }} src={image.url} />
+            <img className="w-full p-10" src={image.url} />
             <h3 className="text-center">{image.caption}</h3>
           </div>
         ))}

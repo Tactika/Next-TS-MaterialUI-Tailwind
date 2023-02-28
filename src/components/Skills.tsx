@@ -5,13 +5,13 @@ const Skills = (props: any) => {
   const skills: SkillsObject = props.skills;
 
   return (
-    <article>
-      <div className="flex flex-wrap space-between">
+    <article className="" id="skills">
+      <div className="flex flex-wrap">
         <div className="block w-full">
           <h2>My Skills</h2>
         </div>
-        <div className="flex flex-wrap grow">
-          <div className=" md:w-1/3 border border-gray-300 shadow-lg shadow-black rounded-lg w-full m-4 p-2">
+        <div className="flex flex-wrap mx-auto">
+          <div className=" md:w-1/4 border border-gray-300 shadow-lg shadow-black rounded-lg w-full p-4 grow m-6">
             <h3 className="text-center font-bold text-xl">Languages</h3>
             <ul className="">
               {skills.languages.map((skill) => (
@@ -22,7 +22,7 @@ const Skills = (props: any) => {
               ))}
             </ul>
           </div>
-          <div className=" md:w-1/3 border border-gray-300 shadow-lg shadow-black rounded-lg w-full m-4 p-2">
+          <div className=" md:w-1/4 border border-gray-300 shadow-lg shadow-black rounded-lg w-full p-4 grow m-6">
             <h3 className="text-center font-bold text-xl">Front End</h3>
             <ul className="">
               {skills.frontend.map((skill) => (
@@ -33,7 +33,7 @@ const Skills = (props: any) => {
               ))}
             </ul>
           </div>
-          <div className=" md:w-1/3 border border-gray-300 shadow-lg shadow-black rounded-lg w-full m-4 p-2">
+          <div className=" md:w-1/4 border border-gray-300 shadow-lg shadow-black rounded-lg w-full p-4 grow m-6">
             <h3 className="text-center font-bold text-xl">Back End</h3>
             <ul className="">
               {skills.backend.map((skill) => (
@@ -44,7 +44,7 @@ const Skills = (props: any) => {
               ))}
             </ul>
           </div>
-          <div className=" md:w-1/3 border border-gray-300 shadow-lg shadow-black rounded-lg w-full m-4 p-2">
+          <div className=" md:w-1/4 border border-gray-300 shadow-lg shadow-black rounded-lg w-full p-4 grow m-6">
             <h3 className="text-center font-bold text-xl">Frameworks</h3>
             <ul className="">
               {skills.frameworks.map((skill) => (
@@ -55,7 +55,7 @@ const Skills = (props: any) => {
               ))}
             </ul>
           </div>
-          <div className=" md:w-1/3 border border-gray-300 shadow-lg shadow-black rounded-lg w-full m-4 p-2">
+          <div className=" md:w-1/4 border border-gray-300 shadow-lg shadow-black rounded-lg w-full p-4 grow m-6">
             <h3 className="text-center font-bold text-xl">Database</h3>
             <ul className="">
               {skills.database.map((skill) => (
@@ -66,7 +66,7 @@ const Skills = (props: any) => {
               ))}
             </ul>
           </div>
-          <div className=" md:w-1/3 border border-gray-300 shadow-lg shadow-black rounded-lg w-full m-4 p-2">
+          <div className=" md:w-1/4 border border-gray-300 shadow-lg shadow-black rounded-lg w-full p-4 grow m-6">
             <h3 className="text-center font-bold text-xl">Tools</h3>
             <ul className="">
               {skills.tools.map((skill) => (

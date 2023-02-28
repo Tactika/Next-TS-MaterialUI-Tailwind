@@ -36,7 +36,10 @@ export default function BasicModal(props: any) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="w-3/4 container mx-auto bg-slate-300 m-3 p-8 rounded-3xl">
+        <Box
+          className="w-3/4 container mx-auto bg-slate-100 m-3 p-8 rounded-3xl"
+          sx={style}
+        >
           <Typography
             className="text-center"
             id="modal-modal-title"

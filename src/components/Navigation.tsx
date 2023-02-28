@@ -42,17 +42,17 @@ function Navigation() {
 
   return (
     <AppBar
-      position="static"
-      className="bg-slate-500 overflow-visible w-screen sticky top-0 z-50 mb-2"
+      position="sticky"
+      className="bg-gray-900 rounded-xl w-full overflow-visible top-0 z-50 mb-2"
     >
-      <Container maxWidth="xl">
-        <Toolbar>
+      <Container>
+        <Toolbar className="mx-auto">
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="#home"
             className="md:flex text-decoration-none xs:hidden"
             sx={{
               mr: 2,
@@ -64,13 +64,13 @@ function Navigation() {
               // textDecoration: "none",
             }}
           >
-            <Image
+            {/* <Image
               src="/images/logo.jpg"
               alt="Damien Richcreek's Logo"
               height={50}
               width={75}
               className="rounded-lg justify-start"
-            />
+            /> */}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -92,10 +92,10 @@ function Navigation() {
                 horizontal: "left",
               }}
               keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
+              // transformOrigin={{
+              //   vertical: "top",
+              //   horizontal: "left",
+              // }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
@@ -104,7 +104,13 @@ function Navigation() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography
+                    component="a"
+                    href={`#${page.toLowerCase()}`}
+                    textAlign="center"
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -140,7 +146,8 @@ function Navigation() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
-                href={`#${page}`}
+                href={`#${page.toLowerCase()}`}
+                className="hover:text-gray-600 hover:bg-white"
               >
                 {page}
               </Button>
